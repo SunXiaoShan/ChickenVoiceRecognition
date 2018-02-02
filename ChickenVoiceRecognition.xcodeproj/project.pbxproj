@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F60CE4820240E400061AA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE4720240E400061AA58 /* AppDelegate.swift */; };
+		8F60CE4A20240E400061AA58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE4920240E400061AA58 /* ViewController.swift */; };
+		8F60CE4D20240E400061AA58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F60CE4B20240E400061AA58 /* Main.storyboard */; };
+		8F60CE4F20240E400061AA58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F60CE4E20240E400061AA58 /* Assets.xcassets */; };
+		8F60CE5220240E400061AA58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F60CE5020240E400061AA58 /* LaunchScreen.storyboard */; };
+		8F60CE5D20240E400061AA58 /* ChickenVoiceRecognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE5C20240E400061AA58 /* ChickenVoiceRecognitionTests.swift */; };
+		8F60CE6820240E400061AA58 /* ChickenVoiceRecognitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE6720240E400061AA58 /* ChickenVoiceRecognitionUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F60CE5920240E400061AA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F60CE3C20240E400061AA58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F60CE4320240E400061AA58;
+			remoteInfo = ChickenVoiceRecognition;
+		};
+		8F60CE6420240E400061AA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F60CE3C20240E400061AA58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F60CE4320240E400061AA58;
+			remoteInfo = ChickenVoiceRecognition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F60CE4420240E400061AA58 /* ChickenVoiceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChickenVoiceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F60CE4720240E400061AA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F60CE4920240E400061AA58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F60CE4C20240E400061AA58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F60CE4E20240E400061AA58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F60CE5120240E400061AA58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F60CE5320240E400061AA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F60CE5820240E400061AA58 /* ChickenVoiceRecognitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChickenVoiceRecognitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F60CE5C20240E400061AA58 /* ChickenVoiceRecognitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenVoiceRecognitionTests.swift; sourceTree = "<group>"; };
+		8F60CE5E20240E400061AA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F60CE6320240E400061AA58 /* ChickenVoiceRecognitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChickenVoiceRecognitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F60CE6720240E400061AA58 /* ChickenVoiceRecognitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenVoiceRecognitionUITests.swift; sourceTree = "<group>"; };
+		8F60CE6920240E400061AA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F60CE4120240E400061AA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F60CE5520240E400061AA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F60CE6020240E400061AA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F60CE3B20240E400061AA58 = {
+			isa = PBXGroup;
+			children = (
+				8F60CE4620240E400061AA58 /* ChickenVoiceRecognition */,
+				8F60CE5B20240E400061AA58 /* ChickenVoiceRecognitionTests */,
+				8F60CE6620240E400061AA58 /* ChickenVoiceRecognitionUITests */,
+				8F60CE4520240E400061AA58 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F60CE4520240E400061AA58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F60CE4420240E400061AA58 /* ChickenVoiceRecognition.app */,
+				8F60CE5820240E400061AA58 /* ChickenVoiceRecognitionTests.xctest */,
+				8F60CE6320240E400061AA58 /* ChickenVoiceRecognitionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F60CE4620240E400061AA58 /* ChickenVoiceRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				8F60CE4720240E400061AA58 /* AppDelegate.swift */,
+				8F60CE4920240E400061AA58 /* ViewController.swift */,
+				8F60CE4B20240E400061AA58 /* Main.storyboard */,
+				8F60CE4E20240E400061AA58 /* Assets.xcassets */,
+				8F60CE5020240E400061AA58 /* LaunchScreen.storyboard */,
+				8F60CE5320240E400061AA58 /* Info.plist */,
+			);
+			path = ChickenVoiceRecognition;
+			sourceTree = "<group>";
+		};
+		8F60CE5B20240E400061AA58 /* ChickenVoiceRecognitionTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F60CE5C20240E400061AA58 /* ChickenVoiceRecognitionTests.swift */,
+				8F60CE5E20240E400061AA58 /* Info.plist */,
+			);
+			path = ChickenVoiceRecognitionTests;
+			sourceTree = "<group>";
+		};
+		8F60CE6620240E400061AA58 /* ChickenVoiceRecognitionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F60CE6720240E400061AA58 /* ChickenVoiceRecognitionUITests.swift */,
+				8F60CE6920240E400061AA58 /* Info.plist */,
+			);
+			path = ChickenVoiceRecognitionUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F60CE4320240E400061AA58 /* ChickenVoiceRecognition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F60CE6C20240E400061AA58 /* Build configuration list for PBXNativeTarget "ChickenVoiceRecognition" */;
+			buildPhases = (
+				8F60CE4020240E400061AA58 /* Sources */,
+				8F60CE4120240E400061AA58 /* Frameworks */,
+				8F60CE4220240E400061AA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChickenVoiceRecognition;
+			productName = ChickenVoiceRecognition;
+			productReference = 8F60CE4420240E400061AA58 /* ChickenVoiceRecognition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F60CE5720240E400061AA58 /* ChickenVoiceRecognitionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F60CE6F20240E400061AA58 /* Build configuration list for PBXNativeTarget "ChickenVoiceRecognitionTests" */;
+			buildPhases = (
+				8F60CE5420240E400061AA58 /* Sources */,
+				8F60CE5520240E400061AA58 /* Frameworks */,
+				8F60CE5620240E400061AA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F60CE5A20240E400061AA58 /* PBXTargetDependency */,
+			);
+			name = ChickenVoiceRecognitionTests;
+			productName = ChickenVoiceRecognitionTests;
+			productReference = 8F60CE5820240E400061AA58 /* ChickenVoiceRecognitionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F60CE6220240E400061AA58 /* ChickenVoiceRecognitionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F60CE7220240E400061AA58 /* Build configuration list for PBXNativeTarget "ChickenVoiceRecognitionUITests" */;
+			buildPhases = (
+				8F60CE5F20240E400061AA58 /* Sources */,
+				8F60CE6020240E400061AA58 /* Frameworks */,
+				8F60CE6120240E400061AA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F60CE6520240E400061AA58 /* PBXTargetDependency */,
+			);
+			name = ChickenVoiceRecognitionUITests;
+			productName = ChickenVoiceRecognitionUITests;
+			productReference = 8F60CE6320240E400061AA58 /* ChickenVoiceRecognitionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F60CE3C20240E400061AA58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = SunXiaoShan;
+				TargetAttributes = {
+					8F60CE4320240E400061AA58 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8F60CE5720240E400061AA58 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8F60CE4320240E400061AA58;
+					};
+					8F60CE6220240E400061AA58 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8F60CE4320240E400061AA58;
+					};
+				};
+			};
+			buildConfigurationList = 8F60CE3F20240E400061AA58 /* Build configuration list for PBXProject "ChickenVoiceRecognition" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F60CE3B20240E400061AA58;
+			productRefGroup = 8F60CE4520240E400061AA58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F60CE4320240E400061AA58 /* ChickenVoiceRecognition */,
+				8F60CE5720240E400061AA58 /* ChickenVoiceRecognitionTests */,
+				8F60CE6220240E400061AA58 /* ChickenVoiceRecognitionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F60CE4220240E400061AA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F60CE5220240E400061AA58 /* LaunchScreen.storyboard in Resources */,
+				8F60CE4F20240E400061AA58 /* Assets.xcassets in Resources */,
+				8F60CE4D20240E400061AA58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F60CE5620240E400061AA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F60CE6120240E400061AA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F60CE4020240E400061AA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F60CE4A20240E400061AA58 /* ViewController.swift in Sources */,
+				8F60CE4820240E400061AA58 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F60CE5420240E400061AA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F60CE5D20240E400061AA58 /* ChickenVoiceRecognitionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F60CE5F20240E400061AA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F60CE6820240E400061AA58 /* ChickenVoiceRecognitionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F60CE5A20240E400061AA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F60CE4320240E400061AA58 /* ChickenVoiceRecognition */;
+			targetProxy = 8F60CE5920240E400061AA58 /* PBXContainerItemProxy */;
+		};
+		8F60CE6520240E400061AA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F60CE4320240E400061AA58 /* ChickenVoiceRecognition */;
+			targetProxy = 8F60CE6420240E400061AA58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F60CE4B20240E400061AA58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F60CE4C20240E400061AA58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F60CE5020240E400061AA58 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F60CE5120240E400061AA58 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F60CE6A20240E400061AA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F60CE6B20240E400061AA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F60CE6D20240E400061AA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXTP59538K;
+				INFOPLIST_FILE = ChickenVoiceRecognition/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SunXiaoShan.ChickenVoiceRecognition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F60CE6E20240E400061AA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXTP59538K;
+				INFOPLIST_FILE = ChickenVoiceRecognition/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SunXiaoShan.ChickenVoiceRecognition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F60CE7020240E400061AA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXTP59538K;
+				INFOPLIST_FILE = ChickenVoiceRecognitionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SunXiaoShan.ChickenVoiceRecognitionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChickenVoiceRecognition.app/ChickenVoiceRecognition";
+			};
+			name = Debug;
+		};
+		8F60CE7120240E400061AA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXTP59538K;
+				INFOPLIST_FILE = ChickenVoiceRecognitionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SunXiaoShan.ChickenVoiceRecognitionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChickenVoiceRecognition.app/ChickenVoiceRecognition";
+			};
+			name = Release;
+		};
+		8F60CE7320240E400061AA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXTP59538K;
+				INFOPLIST_FILE = ChickenVoiceRecognitionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SunXiaoShan.ChickenVoiceRecognitionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChickenVoiceRecognition;
+			};
+			name = Debug;
+		};
+		8F60CE7420240E400061AA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXTP59538K;
+				INFOPLIST_FILE = ChickenVoiceRecognitionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SunXiaoShan.ChickenVoiceRecognitionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChickenVoiceRecognition;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F60CE3F20240E400061AA58 /* Build configuration list for PBXProject "ChickenVoiceRecognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F60CE6A20240E400061AA58 /* Debug */,
+				8F60CE6B20240E400061AA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F60CE6C20240E400061AA58 /* Build configuration list for PBXNativeTarget "ChickenVoiceRecognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F60CE6D20240E400061AA58 /* Debug */,
+				8F60CE6E20240E400061AA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F60CE6F20240E400061AA58 /* Build configuration list for PBXNativeTarget "ChickenVoiceRecognitionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F60CE7020240E400061AA58 /* Debug */,
+				8F60CE7120240E400061AA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F60CE7220240E400061AA58 /* Build configuration list for PBXNativeTarget "ChickenVoiceRecognitionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F60CE7320240E400061AA58 /* Debug */,
+				8F60CE7420240E400061AA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F60CE3C20240E400061AA58 /* Project object */;
+}
