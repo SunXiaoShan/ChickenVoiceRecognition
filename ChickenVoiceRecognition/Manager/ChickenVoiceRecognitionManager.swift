@@ -258,11 +258,9 @@ extension ChickenVoiceRecognitionManager : SFSpeechRecognitionTaskDelegate {
                 self.stopNoAudioDurationTimer()
                 self.stopTimer()
                 self.InterruptEvent()
-                print("test - CCCC")
                 return
             }
         }
-        print("test - DDDD")
         // Start judgment of silent time
         self.stopNoAudioDurationTimer()
         self.startNoAudioDurationTimer()
@@ -285,7 +283,6 @@ extension ChickenVoiceRecognitionManager : SFSpeechRecognitionTaskDelegate {
             if (self.recognizedText.lowercased().range(of: self.commandKeyword) != nil) {
                 chickenStatus = .ChickenListening
                 self.recordButtonTapped()
-                print("test - BBBB")
                 self.delegate?.ChickenVRManagerWaitCommand(self)
                 return
             }
@@ -293,7 +290,6 @@ extension ChickenVoiceRecognitionManager : SFSpeechRecognitionTaskDelegate {
         
         self.stopNoAudioDurationTimer()
         self.delegate?.ChickenVRManagerOnFinal(self, self.recognizedText)
-        print("test - AAAA")
         resetSRMethod()
         self.delegate?.ChickenVRManagerWaitKeyword(self)
     }
