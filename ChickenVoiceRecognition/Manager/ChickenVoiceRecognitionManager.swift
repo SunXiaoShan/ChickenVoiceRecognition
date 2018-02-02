@@ -11,26 +11,39 @@ import Speech
 
 protocol ChickenVoiceRecognitionDelegate : class {
     func ChickenVRManagerStart(_ manager: ChickenVoiceRecognitionManager)
+    func ChickenVRManagerWaitKeyword(_ manager: ChickenVoiceRecognitionManager)
+    func ChickenVRManagerWaitCommand(_ manager: ChickenVoiceRecognitionManager)
     func ChickenVRManagerTimeout(_ manager: ChickenVoiceRecognitionManager, _ ret: String)
     func ChickenVRManagerOnFinal(_ manager: ChickenVoiceRecognitionManager, _ ret: String)
 }
 
 @available(iOS 10.0, *)
 class ChickenVoiceRecognitionManager: NSObject {
+    enum ChickenStatus {
+        case ChickenNone
+        case ChickenReady
+        case ChickenListening
+        case ChickenProcessing
+    }
+    
     fileprivate let speechRecognizer = SFSpeechRecognizer()!
     fileprivate var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     fileprivate var recognitionTask: SFSpeechRecognitionTask?
     var audioEngine = AVAudioEngine()
     
+    fileprivate var locale: String = "en_US"
     fileprivate var recognizedText : String = ""
     
     fileprivate var recognitionLimiter: Timer?
     /** Speech recognition time limit (maximum time 60 seconds is Apple's limit time) */
-    fileprivate var recognitionLimitSec: Int = 60
+    fileprivate var recognitionLimitSec: Int = 15
     
     fileprivate var noAudioDurationTimer: Timer?
     /** Threshold for judging period of silence */
     fileprivate var noAudioDurationLimitSec: Int = 2
+    
+    fileprivate var commandKeyword: String = "chicken"
+    fileprivate var chickenStatus: ChickenStatus = .ChickenNone
     
     fileprivate var status : String = ""
     
@@ -50,6 +63,14 @@ class ChickenVoiceRecognitionManager: NSObject {
     
     open func setRecognitionLimitSec(_ v : Int) -> Void {
         self.recognitionLimitSec = v%60;
+    }
+    
+    open func setCommandKeyword(_ keyword : String) {
+        self.commandKeyword = keyword
+    }
+    
+    open func setLocale(_ locale : String) {
+        self.locale = locale
     }
     
     open func isEnabled() -> Bool {
@@ -102,6 +123,10 @@ class ChickenVoiceRecognitionManager: NSObject {
         }
         audioEngine.prepare()
         try audioEngine.start()
+    }
+    
+    fileprivate func recordButtonTapped() {
+        self.recordButtonTapped(locale)
     }
     
     open func recordButtonTapped(_ locale: String) -> String {
@@ -197,6 +222,14 @@ class ChickenVoiceRecognitionManager: NSObject {
         return audioEngine.inputNode
     }
     
+    func resetSRMethod() {
+        stopNoAudioDurationTimer()
+        stopTimer()
+        InterruptEvent()
+        chickenStatus = .ChickenReady
+        recordButtonTapped()
+    }
+    
 }
 
 extension ChickenVoiceRecognitionManager : SFSpeechRecognizerDelegate {
@@ -217,6 +250,19 @@ extension ChickenVoiceRecognitionManager : SFSpeechRecognitionTaskDelegate {
     // @see https://developer.apple.com/reference/speech/sfspeechrecognitiontaskdelegate/1649210-speechrecognitiontask
     open func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didHypothesizeTranscription transcription: SFTranscription) {
         self.recognizedText = transcription.formattedString
+        
+        if chickenStatus == .ChickenReady {
+            if (transcription.formattedString.lowercased().range(of: self.commandKeyword) != nil) {
+                // Stop voice recognition
+                // Create new voice recognition
+                self.stopNoAudioDurationTimer()
+                self.stopTimer()
+                self.InterruptEvent()
+                print("test - CCCC")
+                return
+            }
+        }
+        print("test - DDDD")
         // Start judgment of silent time
         self.stopNoAudioDurationTimer()
         self.startNoAudioDurationTimer()
@@ -235,7 +281,20 @@ extension ChickenVoiceRecognitionManager : SFSpeechRecognitionTaskDelegate {
     // Tells the delegate when the recognition of all requested utterances is finished.
     // @see https://developer.apple.com/reference/speech/sfspeechrecognitiontaskdelegate/1649215-speechrecognitiontask
     open func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didFinishSuccessfully successfully: Bool) {
+        if chickenStatus == .ChickenReady {
+            if (self.recognizedText.lowercased().range(of: self.commandKeyword) != nil) {
+                chickenStatus = .ChickenListening
+                self.recordButtonTapped()
+                print("test - BBBB")
+                self.delegate?.ChickenVRManagerWaitCommand(self)
+                return
+            }
+        }
+        
         self.stopNoAudioDurationTimer()
         self.delegate?.ChickenVRManagerOnFinal(self, self.recognizedText)
+        print("test - AAAA")
+        resetSRMethod()
+        self.delegate?.ChickenVRManagerWaitKeyword(self)
     }
 }

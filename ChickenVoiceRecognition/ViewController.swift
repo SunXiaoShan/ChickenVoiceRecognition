@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
+    
     let mn : ChickenVoiceRecognitionManager = ChickenVoiceRecognitionManager()
 
     override func viewDidLoad() {
@@ -48,7 +50,7 @@ class ViewController: UIViewController {
 extension ViewController : ChickenVoiceRecognitionDelegate {
     func ChickenVRManagerStart(_ manager: ChickenVoiceRecognitionManager) {
         button.setTitle("Stop Recording", for: .normal)
-        textView.text = "This is the UITextView"
+        //textView.text = "This is the UITextView"
     }
     
     func ChickenVRManagerTimeout(_ manager: ChickenVoiceRecognitionManager, _ ret: String) {
@@ -60,5 +62,13 @@ extension ViewController : ChickenVoiceRecognitionDelegate {
         print("final : \(ret)")
         button.setTitle("Start Recording", for: .normal)
         textView.text = ret
+    }
+    
+    func ChickenVRManagerWaitKeyword(_ manager: ChickenVoiceRecognitionManager) {
+        imageView.backgroundColor = UIColor.green
+    }
+    
+    func ChickenVRManagerWaitCommand(_ manager: ChickenVoiceRecognitionManager) {
+        imageView.backgroundColor = UIColor.blue
     }
 }
