@@ -9,16 +9,14 @@
 import UIKit
 import Speech
 
-protocol TimeOutDelegate {
-    func timeOut(_ ret: String)
-}
-
-protocol OnFinalDelegate {
-    func onFinal(_ ret: String)
+protocol ChickenVoiceRecognitionDelegate : class {
+    func ChickenVRManagerStart(_ manager: ChickenVoiceRecognitionManager)
+    func ChickenVRManagerTimeout(_ manager: ChickenVoiceRecognitionManager, _ ret: String)
+    func ChickenVRManagerOnFinal(_ manager: ChickenVoiceRecognitionManager, _ ret: String)
 }
 
 @available(iOS 10.0, *)
-class CheckVoiceRecognitionManager: NSObject {
+class ChickenVoiceRecognitionManager: NSObject {
     fileprivate let speechRecognizer = SFSpeechRecognizer()!
     fileprivate var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     fileprivate var recognitionTask: SFSpeechRecognitionTask?
@@ -38,9 +36,12 @@ class CheckVoiceRecognitionManager: NSObject {
     
     fileprivate var localeIdentifier: String?
     
-    internal var delegate: TimeOutDelegate?
+    internal var delegate: ChickenVoiceRecognitionDelegate?
     
-    internal var onFinalDelegate: OnFinalDelegate?
+    override init() {
+        super.init()
+        setup()
+    }
     
     func setup() {
         audioEngine = AVAudioEngine()
@@ -48,7 +49,7 @@ class CheckVoiceRecognitionManager: NSObject {
     }
     
     open func setRecognitionLimitSec(_ v : Int) -> Void {
-        self.recognitionLimitSec = v;
+        self.recognitionLimitSec = v%60;
     }
     
     open func isEnabled() -> Bool {
@@ -72,7 +73,6 @@ class CheckVoiceRecognitionManager: NSObject {
     }
     
     fileprivate func startRecording() throws {
-        
         // Cancel the previous task if it's running.
         if let recognitionTask = recognitionTask {
             recognitionTask.cancel()
@@ -116,6 +116,7 @@ class CheckVoiceRecognitionManager: NSObject {
             inputNode.removeTap(onBus: 0)
             self.stopTimer()
         } else {
+            self.delegate?.ChickenVRManagerStart(self)
             self.recognizedText = ""
             try! startRecording()
             self.startTimer()
@@ -178,7 +179,7 @@ class CheckVoiceRecognitionManager: NSObject {
         recognitionLimiter = nil
         noAudioDurationTimer = nil
         self.resetAVAudioSession()
-        delegate?.timeOut(ret)
+        delegate?.ChickenVRManagerTimeout(self, ret)
     }
     
     /** AVAudioSession initialize. */
@@ -198,7 +199,7 @@ class CheckVoiceRecognitionManager: NSObject {
     
 }
 
-extension CheckVoiceRecognitionManager : SFSpeechRecognizerDelegate {
+extension ChickenVoiceRecognitionManager : SFSpeechRecognizerDelegate {
     // MARK: SFSpeechRecognizerDelegate
     open func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {}
     
@@ -211,7 +212,7 @@ extension CheckVoiceRecognitionManager : SFSpeechRecognizerDelegate {
     open func speechRecognitionTaskWasCancelled(_ task: SFSpeechRecognitionTask) {}
 }
 
-extension CheckVoiceRecognitionManager : SFSpeechRecognitionTaskDelegate {
+extension ChickenVoiceRecognitionManager : SFSpeechRecognitionTaskDelegate {
     // Tells the delegate that a hypothesized transcription is available.
     // @see https://developer.apple.com/reference/speech/sfspeechrecognitiontaskdelegate/1649210-speechrecognitiontask
     open func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didHypothesizeTranscription transcription: SFTranscription) {
@@ -235,6 +236,6 @@ extension CheckVoiceRecognitionManager : SFSpeechRecognitionTaskDelegate {
     // @see https://developer.apple.com/reference/speech/sfspeechrecognitiontaskdelegate/1649215-speechrecognitiontask
     open func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didFinishSuccessfully successfully: Bool) {
         self.stopNoAudioDurationTimer()
-        self.onFinalDelegate?.onFinal(self.recognizedText)
+        self.delegate?.ChickenVRManagerOnFinal(self, self.recognizedText)
     }
 }

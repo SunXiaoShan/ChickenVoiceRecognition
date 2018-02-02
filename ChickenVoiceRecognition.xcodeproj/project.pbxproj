@@ -14,9 +14,9 @@
 		8F60CE5220240E400061AA58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F60CE5020240E400061AA58 /* LaunchScreen.storyboard */; };
 		8F60CE5D20240E400061AA58 /* ChickenVoiceRecognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE5C20240E400061AA58 /* ChickenVoiceRecognitionTests.swift */; };
 		8F60CE6820240E400061AA58 /* ChickenVoiceRecognitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE6720240E400061AA58 /* ChickenVoiceRecognitionUITests.swift */; };
-		8F60CE77202412EE0061AA58 /* CheckVoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE76202412EE0061AA58 /* CheckVoiceRecognitionManager.swift */; };
-		8F60CE78202412EE0061AA58 /* CheckVoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE76202412EE0061AA58 /* CheckVoiceRecognitionManager.swift */; };
-		8F60CE79202412EE0061AA58 /* CheckVoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE76202412EE0061AA58 /* CheckVoiceRecognitionManager.swift */; };
+		8F60CE77202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */; };
+		8F60CE78202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */; };
+		8F60CE79202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		8F60CE6320240E400061AA58 /* ChickenVoiceRecognitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChickenVoiceRecognitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F60CE6720240E400061AA58 /* ChickenVoiceRecognitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenVoiceRecognitionUITests.swift; sourceTree = "<group>"; };
 		8F60CE6920240E400061AA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F60CE76202412EE0061AA58 /* CheckVoiceRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVoiceRecognitionManager.swift; sourceTree = "<group>"; };
+		8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenVoiceRecognitionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 		8F60CE75202412BB0061AA58 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				8F60CE76202412EE0061AA58 /* CheckVoiceRecognitionManager.swift */,
+				8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 			files = (
 				8F60CE4A20240E400061AA58 /* ViewController.swift in Sources */,
 				8F60CE4820240E400061AA58 /* AppDelegate.swift in Sources */,
-				8F60CE77202412EE0061AA58 /* CheckVoiceRecognitionManager.swift in Sources */,
+				8F60CE77202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F60CE5D20240E400061AA58 /* ChickenVoiceRecognitionTests.swift in Sources */,
-				8F60CE78202412EE0061AA58 /* CheckVoiceRecognitionManager.swift in Sources */,
+				8F60CE78202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F60CE6820240E400061AA58 /* ChickenVoiceRecognitionUITests.swift in Sources */,
-				8F60CE79202412EE0061AA58 /* CheckVoiceRecognitionManager.swift in Sources */,
+				8F60CE79202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
