@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageStatus: UIImageView!
     
     let mn : ChickenVoiceRecognitionManager = ChickenVoiceRecognitionManager()
+    let locationMn : LocationManager = LocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
