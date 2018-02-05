@@ -45,10 +45,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is the UITextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oe9-pD-m0b">
-                                <rect key="frame" x="16" y="142" width="343" height="291"/>
+                                <rect key="frame" x="16" y="142" width="343" height="69"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="291" id="lCi-1I-xk8"/>
+                                    <constraint firstAttribute="height" constant="69" id="lCi-1I-xk8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -60,13 +60,22 @@
                                     <constraint firstAttribute="width" constant="30" id="xrl-el-byf"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Acd-Lp-92V">
+                                <rect key="frame" x="16" y="50" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="P4f-eY-a5k"/>
+                                    <constraint firstAttribute="width" constant="60" id="dQI-Oh-i5b"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Acd-Lp-92V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="0Jh-ZY-1Sg"/>
                             <constraint firstItem="dHM-EP-dH5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQZ-dk-BXV"/>
                             <constraint firstItem="Idy-AV-v9u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ay9-Go-9p2"/>
                             <constraint firstItem="dHM-EP-dH5" firstAttribute="leading" secondItem="Cxx-rc-3yg" secondAttribute="trailing" constant="10" id="KAp-Zt-Yex"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dHM-EP-dH5" secondAttribute="bottom" constant="50" id="PhR-Y3-icp"/>
+                            <constraint firstItem="Acd-Lp-92V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="R4h-cb-j4a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cxx-rc-3yg" secondAttribute="bottom" constant="50" id="Un2-ob-Tk2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oe9-pD-m0b" secondAttribute="trailing" constant="16" id="Wzd-Ap-ZGs"/>
                             <constraint firstItem="Oe9-pD-m0b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zo2-nQ-MBx"/>
@@ -77,6 +86,7 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="dHM-EP-dH5" id="NVv-Wn-dC7"/>
+                        <outlet property="imageStatus" destination="Acd-Lp-92V" id="5zh-vZ-W5d"/>
                         <outlet property="imageView" destination="Cxx-rc-3yg" id="ZRm-Mx-bR4"/>
                         <outlet property="textView" destination="Oe9-pD-m0b" id="ghB-2L-FWZ"/>
                     </connections>

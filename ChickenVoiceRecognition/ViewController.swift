@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageStatus: UIImageView!
     
     let mn : ChickenVoiceRecognitionManager = ChickenVoiceRecognitionManager()
 
@@ -66,9 +67,11 @@ extension ViewController : ChickenVoiceRecognitionDelegate {
     
     func ChickenVRManagerWaitKeyword(_ manager: ChickenVoiceRecognitionManager) {
         imageView.backgroundColor = UIColor.green
+        imageStatus.image = CommonDefine().getWaitChickenImage()
     }
     
     func ChickenVRManagerWaitCommand(_ manager: ChickenVoiceRecognitionManager) {
         imageView.backgroundColor = UIColor.blue
+        imageStatus.image = CommonDefine().getCommandChickenImage()
     }
 }

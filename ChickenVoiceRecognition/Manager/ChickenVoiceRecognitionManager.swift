@@ -284,8 +284,11 @@ extension ChickenVoiceRecognitionManager : SFSpeechRecognitionTaskDelegate {
                 chickenStatus = .ChickenListening
                 self.recordButtonTapped()
                 self.delegate?.ChickenVRManagerWaitCommand(self)
-                return
+            } else {
+                resetSRMethod()
+                self.delegate?.ChickenVRManagerWaitKeyword(self)
             }
+            return
         }
         
         self.stopNoAudioDurationTimer()
