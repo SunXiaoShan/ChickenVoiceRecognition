@@ -67,25 +67,33 @@
                                     <constraint firstAttribute="width" constant="60" id="dQI-Oh-i5b"/>
                                 </constraints>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlk-L2-FXU">
+                                <rect key="frame" x="10" y="221" width="355" height="356"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Acd-Lp-92V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="0Jh-ZY-1Sg"/>
                             <constraint firstItem="dHM-EP-dH5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQZ-dk-BXV"/>
+                            <constraint firstItem="mlk-L2-FXU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ASp-ra-2bI"/>
                             <constraint firstItem="Idy-AV-v9u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ay9-Go-9p2"/>
                             <constraint firstItem="dHM-EP-dH5" firstAttribute="leading" secondItem="Cxx-rc-3yg" secondAttribute="trailing" constant="10" id="KAp-Zt-Yex"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mlk-L2-FXU" secondAttribute="trailing" constant="10" id="ORa-Vd-o1u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dHM-EP-dH5" secondAttribute="bottom" constant="50" id="PhR-Y3-icp"/>
                             <constraint firstItem="Acd-Lp-92V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="R4h-cb-j4a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cxx-rc-3yg" secondAttribute="bottom" constant="50" id="Un2-ob-Tk2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oe9-pD-m0b" secondAttribute="trailing" constant="16" id="Wzd-Ap-ZGs"/>
                             <constraint firstItem="Oe9-pD-m0b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zo2-nQ-MBx"/>
                             <constraint firstItem="Oe9-pD-m0b" firstAttribute="top" secondItem="Idy-AV-v9u" secondAttribute="bottom" id="fcV-mz-CUs"/>
+                            <constraint firstItem="mlk-L2-FXU" firstAttribute="top" secondItem="Oe9-pD-m0b" secondAttribute="bottom" constant="10" id="oRj-WH-kDE"/>
                             <constraint firstItem="Idy-AV-v9u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="shl-66-0k1"/>
+                            <constraint firstItem="dHM-EP-dH5" firstAttribute="top" secondItem="mlk-L2-FXU" secondAttribute="bottom" constant="10" id="weH-Al-yfU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="button" destination="dHM-EP-dH5" id="NVv-Wn-dC7"/>
+                        <outlet property="contentView" destination="mlk-L2-FXU" id="GZV-6b-JTz"/>
                         <outlet property="imageStatus" destination="Acd-Lp-92V" id="5zh-vZ-W5d"/>
                         <outlet property="imageView" destination="Cxx-rc-3yg" id="ZRm-Mx-bR4"/>
                         <outlet property="textView" destination="Oe9-pD-m0b" id="ghB-2L-FWZ"/>

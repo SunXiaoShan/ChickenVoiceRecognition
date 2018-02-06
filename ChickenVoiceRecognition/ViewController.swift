@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let TAG_MAP = 112
+    
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageStatus: UIImageView!
+    @IBOutlet weak var contentView: UIScrollView!
     
     let mn : ChickenVoiceRecognitionManager = ChickenVoiceRecognitionManager()
     let locationMn : LocationManager = LocationManager()
@@ -22,6 +25,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         mn.delegate = self
         mn.isEnabled()
+        
+        
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
@@ -47,6 +52,21 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    private func removeCurrentMap() {
+        let map:UIView? = contentView.viewWithTag(TAG_MAP)
+        map?.removeFromSuperview()
+    }
+    
+    private func showCurrentLocationMap() {
+        removeCurrentMap()
+        
+        locationMn.moveToCurrentLocation()
+        
+        let map = locationMn.getMapView(contentView.frame.size)
+        map.tag = TAG_MAP
+        contentView.addSubview(map)
+    }
+    
 }
 
 extension ViewController : ChickenVoiceRecognitionDelegate {
@@ -64,6 +84,7 @@ extension ViewController : ChickenVoiceRecognitionDelegate {
         print("final : \(ret)")
         button.setTitle("Start Recording", for: .normal)
         textView.text = ret
+        handleVoiceRecognitionResult(ret)
     }
     
     func ChickenVRManagerWaitKeyword(_ manager: ChickenVoiceRecognitionManager) {
@@ -74,5 +95,18 @@ extension ViewController : ChickenVoiceRecognitionDelegate {
     func ChickenVRManagerWaitCommand(_ manager: ChickenVoiceRecognitionManager) {
         imageView.backgroundColor = UIColor.blue
         imageStatus.image = CommonDefine().getCommandChickenImage()
+    }
+    
+    func handleVoiceRecognitionResult(_ resource : String) {
+        removeCurrentMap()
+        
+        if resource.lowercased().range(of:"where am i") != nil {
+            print("exists")
+            handleWhereAmICommand()
+        }
+    }
+    
+    func handleWhereAmICommand() {
+        showCurrentLocationMap()
     }
 }
