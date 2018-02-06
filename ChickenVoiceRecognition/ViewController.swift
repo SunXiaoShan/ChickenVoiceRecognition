@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     let TAG_MAP = 112
+    let TAG_WEB = 113
     
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var textView: UITextView!
@@ -17,21 +18,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageStatus: UIImageView!
     @IBOutlet weak var contentView: UIScrollView!
     
-    let mn : ChickenVoiceRecognitionManager = ChickenVoiceRecognitionManager()
+    let chickenVoiceRecognitionMn : ChickenVoiceRecognitionManager = ChickenVoiceRecognitionManager()
     let locationMn : LocationManager = LocationManager()
+    let webViewMn : WebViewManager = WebViewManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        mn.delegate = self
-        mn.isEnabled()
-        
-        
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        chickenVoiceRecognitionMn.delegate = self
+        chickenVoiceRecognitionMn.isEnabled()
+
+        addDismissKeyboardEvent()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,11 +38,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func actionClickButton(_ sender: Any) {
-        guard mn.isEnabled() else {
+        guard chickenVoiceRecognitionMn.isEnabled() else {
             print("")
             return
         }
-        mn.recordButtonTapped("en_US")
+        chickenVoiceRecognitionMn.recordButtonTapped("en_US")
     }
     
     @objc func dismissKeyboard() {
@@ -65,6 +62,25 @@ class ViewController: UIViewController {
         let map = locationMn.getMapView(contentView.frame.size)
         map.tag = TAG_MAP
         contentView.addSubview(map)
+    }
+    
+    private func addDismissKeyboardEvent() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    private func showWebView(_ string: String) {
+        let web = webViewMn.getWebView(contentView.frame.size)
+        webViewMn.loadWebView(string)
+        web.tag = TAG_WEB
+        contentView.addSubview(web)
+    }
+    
+    private func removeWebView() {
+        let web:UIView? = contentView.viewWithTag(TAG_WEB)
+        web?.removeFromSuperview()
     }
     
 }
@@ -99,8 +115,17 @@ extension ViewController : ChickenVoiceRecognitionDelegate {
     
     func handleVoiceRecognitionResult(_ resource : String) {
         removeCurrentMap()
+        removeWebView()
         
-        if resource.lowercased().range(of:"where am i") != nil {
+        let search_key = "search"
+        if resource.lowercased().hasPrefix(search_key) == true {
+            if (resource.count >= search_key.count + 1) {
+                var newSTR = resource.dropFirst(search_key.count + 1)
+                let swiftyString = newSTR.replacingOccurrences(of: " ", with: "+")
+                handleWebViewSearch(String(swiftyString))
+            }
+
+        } else if resource.lowercased().range(of:"where am i") != nil {
             print("exists")
             handleWhereAmICommand()
         }
@@ -108,5 +133,9 @@ extension ViewController : ChickenVoiceRecognitionDelegate {
     
     func handleWhereAmICommand() {
         showCurrentLocationMap()
+    }
+    
+    func handleWebViewSearch(_ context : String) {
+        showWebView(context)
     }
 }

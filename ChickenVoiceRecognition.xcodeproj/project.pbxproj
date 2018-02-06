@@ -17,6 +17,9 @@
 		8F60CE77202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */; };
 		8F60CE78202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */; };
 		8F60CE79202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */; };
+		8FB1B2BA2029ACB4006C45E1 /* WebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1B2B92029ACB4006C45E1 /* WebViewManager.swift */; };
+		8FB1B2BB2029ACB4006C45E1 /* WebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1B2B92029ACB4006C45E1 /* WebViewManager.swift */; };
+		8FB1B2BC2029ACB4006C45E1 /* WebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1B2B92029ACB4006C45E1 /* WebViewManager.swift */; };
 		8FC02E5C2028626B00BDCD27 /* CommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC02E5B2028626B00BDCD27 /* CommonDefine.swift */; };
 		8FC02E5D2028626B00BDCD27 /* CommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC02E5B2028626B00BDCD27 /* CommonDefine.swift */; };
 		8FC02E5E2028626B00BDCD27 /* CommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC02E5B2028626B00BDCD27 /* CommonDefine.swift */; };
@@ -57,6 +60,7 @@
 		8F60CE6720240E400061AA58 /* ChickenVoiceRecognitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenVoiceRecognitionUITests.swift; sourceTree = "<group>"; };
 		8F60CE6920240E400061AA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenVoiceRecognitionManager.swift; sourceTree = "<group>"; };
+		8FB1B2B92029ACB4006C45E1 /* WebViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewManager.swift; sourceTree = "<group>"; };
 		8FC02E5B2028626B00BDCD27 /* CommonDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDefine.swift; sourceTree = "<group>"; };
 		8FC02E5F2028691F00BDCD27 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +148,7 @@
 			children = (
 				8F60CE76202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift */,
 				8FC02E5F2028691F00BDCD27 /* LocationManager.swift */,
+				8FB1B2B92029ACB4006C45E1 /* WebViewManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F60CE4A20240E400061AA58 /* ViewController.swift in Sources */,
+				8FB1B2BA2029ACB4006C45E1 /* WebViewManager.swift in Sources */,
 				8FC02E5C2028626B00BDCD27 /* CommonDefine.swift in Sources */,
 				8FC02E602028691F00BDCD27 /* LocationManager.swift in Sources */,
 				8F60CE4820240E400061AA58 /* AppDelegate.swift in Sources */,
@@ -298,6 +304,7 @@
 				8F60CE5D20240E400061AA58 /* ChickenVoiceRecognitionTests.swift in Sources */,
 				8F60CE78202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */,
 				8FC02E5D2028626B00BDCD27 /* CommonDefine.swift in Sources */,
+				8FB1B2BB2029ACB4006C45E1 /* WebViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +316,7 @@
 				8F60CE6820240E400061AA58 /* ChickenVoiceRecognitionUITests.swift in Sources */,
 				8F60CE79202412EE0061AA58 /* ChickenVoiceRecognitionManager.swift in Sources */,
 				8FC02E5E2028626B00BDCD27 /* CommonDefine.swift in Sources */,
+				8FB1B2BC2029ACB4006C45E1 /* WebViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
