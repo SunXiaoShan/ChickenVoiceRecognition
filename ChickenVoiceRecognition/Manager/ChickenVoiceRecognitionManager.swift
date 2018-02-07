@@ -59,6 +59,7 @@ class ChickenVoiceRecognitionManager: NSObject {
     func setup() {
         audioEngine = AVAudioEngine()
         self.initializeAVAudioSession()
+        chickenStatus = .ChickenReady
     }
     
     open func setRecognitionLimitSec(_ v : Int) -> Void {

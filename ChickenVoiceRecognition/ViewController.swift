@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         chickenVoiceRecognitionMn.isEnabled()
 
         addDismissKeyboardEvent()
+        imageStatus.image = CommonDefine().getWaitChickenImage()
+        chickenVoiceRecognitionMn.recordButtonTapped("en_US")
     }
 
     override func didReceiveMemoryWarning() {
@@ -126,7 +128,6 @@ extension ViewController : ChickenVoiceRecognitionDelegate {
             }
 
         } else if resource.lowercased().range(of:"where am i") != nil {
-            print("exists")
             handleWhereAmICommand()
         }
     }
